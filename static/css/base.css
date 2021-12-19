@@ -12,8 +12,8 @@ body {
 
 /* Navbar dark */
 
-.navbar-dark {
-    background: #000;
+.navbar-dark-grey {
+    background: #A9A9A9;
 }
 
 .text-white {
@@ -64,6 +64,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
