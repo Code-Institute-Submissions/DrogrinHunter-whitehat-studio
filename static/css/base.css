@@ -10,6 +10,16 @@ body {
     font-family: 'Roboto';
 }
 
+/* Navbar dark */
+
+.navbar-dark {
+    background: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
