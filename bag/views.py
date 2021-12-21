@@ -1,4 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.contrib import messages
+
+from products.models import Product
+
 
 def view_bag(request):
     """ This view returns the content of the shopping bag """
