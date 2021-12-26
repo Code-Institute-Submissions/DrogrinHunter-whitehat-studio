@@ -1,3 +1,7 @@
+.profile-form-input {
+    color: #000;
+}
+
 .profile-form-input::placeholder {
     color: #666d75;
 }
