@@ -1,0 +1,1 @@
+WhiteHat Studio - Confirmation for Order {{ order.order_number }}.
