@@ -18,7 +18,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Profile has not been updated, please check all boxes are filled out successfully')
+            messages.error(request, 'Profile has not been updated, please \
+                check all boxes are filled out successfully')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
