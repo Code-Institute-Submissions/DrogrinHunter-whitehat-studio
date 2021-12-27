@@ -1,3 +1,9 @@
+.order-history {
+    max-height: 416px; /* This is the height of the bootstrap form and submit button */
+    overflow-y: auto;
+
+}
+
 .profile-form-input {
     color: #000;
 }
