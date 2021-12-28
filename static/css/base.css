@@ -232,6 +232,35 @@ a.category-badge > span.badge:hover {
 	color: #1491a5; /* text-info */
 }
 
+/* Product Form */ 
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #c62f3e;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c62f3e;
+    border-color: #c62f3e;
+    border-radius: 0;
+}
+
+
 /* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
