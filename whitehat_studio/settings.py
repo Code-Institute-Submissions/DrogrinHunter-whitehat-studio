@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -32,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['whitehat-studio.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -127,12 +128,20 @@ WSGI_APPLICATION = 'whitehat_studio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+    'default': dj_database_url.parse('postgres://twhdsaduyhqvzy:84d0ff6f6addfaa3dc23676f7284b35a1ec0e445a8d8bab2ed9eda533f340b34@ec2-99-81-177-233.eu-west-1.compute.amazonaws.com:5432/d9vl2ofmhtnl27')
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
 
 
 # Password validation

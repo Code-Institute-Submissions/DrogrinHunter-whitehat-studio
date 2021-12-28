@@ -1,0 +1,1 @@
+web: gunicorn whitehat-studio.wsgi:application 
