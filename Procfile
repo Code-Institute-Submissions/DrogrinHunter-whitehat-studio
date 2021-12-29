@@ -1,1 +1,1 @@
-web: gunicorn whitehat-studio.wsgi:application 
+web: gunicorn whitehat_studio.wsgi:application
