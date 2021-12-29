@@ -164,6 +164,12 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'USE_AWS' in os.environ:
+    # Cache control 
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
     # This is the bucket config
     AWS_STORAGE_BUCKET_NAME = 'whitehat-studio'
     AWS_S3_REGION_NAME = 'eu-west-2'
