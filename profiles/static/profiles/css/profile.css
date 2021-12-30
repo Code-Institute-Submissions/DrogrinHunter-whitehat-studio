@@ -1,5 +1,6 @@
 .order-history {
-    max-height: 416px; /* This is the height of the bootstrap form and submit button */
+    max-height: 416px;
+    /* This is the height of the bootstrap form and submit button */
     overflow-y: auto;
 
 }
