@@ -57,27 +57,27 @@
                                 <td>
                                     <ul class="list-unstyled">
                                         {% for item in order.lineitems.all %}
-                                        <li class=" small">
-                                    {% if item.product.has_sizes %}
-                                    Size {{ item.product.size|upper }}
-                                    {% endif %}{{ item.product.name }} x {{ item.quantity }}
-                                    </li>
+                                        <li class="small">
+                                            {% if item.product.has_sizes %}
+                                                Size {{ item.product.size|upper }}
+                                            {% endif %}{{ item.product.name }} x {{ item.quantity }}
+                                        </li>
+                                        {% endfor %}
                                     </ul>
-                            </td>
-                            <td>${{ order.grand_total }}</td>
-
-                        </tr>
+                                </td>
+                                <td>${{ order.grand_total }}</td>
+                            </tr>
                         {% endfor %}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
         </div>
+        {{ profile }}
+{% endblock %}
 
-    </div>
-    {{ profile }}
-    {% endblock %}
-
-    {% block postloadjs %}
+{% block postloadjs %}
     {{ block.super }}
     <script type=" text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-    {% endblock %}
+{% endblock %}
