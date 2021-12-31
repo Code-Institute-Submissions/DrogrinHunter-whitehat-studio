@@ -160,7 +160,7 @@ I also carried out testing on the following:
 ### Code Validation
 - W3C Markup Validation was used for HTML.
 - W3C CSS Validation was used for validation my own CSS code. 
-- Code Beautify Python Formatter was used for validation my own Python code.
+- Pep8 Online was used for validation my own Python code, there are some errors where text is too long for the line however these are lines that I have been unable to format, even using python formatters. 
 
 ---
 
