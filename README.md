@@ -13,6 +13,7 @@ Whitehat Studio
 - [**Features**](#Features)
     - [Existing Features](#Existing-Features)
     - [Potential Future Features](#Potential-Future-Features)
+	- [Database](#Database)
 - [**Technologies Used**](#Technologies-Used)
 - [**Testing**](#Testing)
 - [**Code Validation**](#Code-Validation)
@@ -87,13 +88,20 @@ Wireframes - [Wireframes](readme/wireframes/wireframes.pdf)
 - Users are able to sort the items based on different requirements.
 - Users are able to see toast messages when different actions are completed - these range for adding articles to their bag, editing products or removing items from their bag. 
 
-### Features Left to Implement
+### Potential Future Features
 
 - Articles to be stored in a database, whether MongoDB or SQL, instead of statically on the website itself. 
 - Text Message notifications - for delivery confirmation or tracking. 
 - Improve the speed of the website.
 - Change the main currency for the Django from USD to GBP, I have started on this by ensuring that all manually written "$" is replaced with "£". 
 - Ensuring that all images are the same size, this would be doable when using real life images.
+
+---
+
+### Database
+- The database that I am using is the Postgres DB within the Gitpod / Heroku platform, it has enough products on there to show the functionality and allows for more products to be added in the future.
+
+It is my aim to deploy the database to MongoDB or SQL in the future.
 
 ---
 
