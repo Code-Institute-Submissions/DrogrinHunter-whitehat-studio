@@ -74,7 +74,7 @@ For the font, I have used Google Font's Roboto with Sans Serif as the backup jus
 ---
 
 ### Wireframes
-Wireframes - [Wireframes]
+Wireframes - [Wireframes](readme/wireframes/wireframes.pdf)
 
 ---
 
