@@ -21,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "DEVELOPMENT" in os.environ
+DEBUG = True
+# "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = ["whitehat-studio.herokuapp.com", "localhost"]
 
@@ -115,7 +116,7 @@ WSGI_APPLICATION = "whitehat_studio.wsgi.application"
 if "DATABASE_URL" in os.environ:
     DATABASES = {
         "default": dj_database_url.parse(
-            "postgres://twhdsaduyhqvzy:84d0ff6f6addfaa3dc23676f7284b35a1ec0e445a8d8bab2ed9eda533f340b34@ec2-99-81-177-233.eu-west-1.compute.amazonaws.com:5432/d9vl2ofmhtnl27"
+            "postgres://bhhegmzremocwp:c65e4265557687108f846e9bc2ab0d8b2e1897b2e87625e2b5f6b354b1350473@ec2-52-31-217-108.eu-west-1.compute.amazonaws.com:5432/db9a0vl9qe10ts"
         )
     }
 else:
