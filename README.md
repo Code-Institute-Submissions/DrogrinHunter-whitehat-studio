@@ -250,8 +250,10 @@ Heroku allows us to host Python projects which can have more features than stati
 
 ![Database Structure](readme/db_structure.png)
 
+A downloadable version of this image (in a PNG format) can be found [here](readme/db_structure.png)
+
 This database structure was created by doing the following: 
-1. Install both "django-extensions" and "pyparsing pydot".
+1. Install the below packages.
 	- `pip3 install django-extensions`
 	- `pip3 install pyparsing pydot`
 2. Within `settings.py` add `django-extensions` to your list of installed apps.
