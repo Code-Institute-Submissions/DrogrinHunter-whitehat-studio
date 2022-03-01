@@ -23,6 +23,7 @@ Whitehat Studio
     - [Running Code Locally](#Running-Code)
     - [Deploying to Heroku](#Deploying-to-Heroku)
     - [Deploying Static Files to AWS](#Deploy-to-aws)
+- [Database Structure](#Database-Structure)
 - [**Credits**](#Credits)
 
 ---
@@ -234,7 +235,7 @@ Heroku allows us to host Python projects which can have more features than stati
 5. Under this section, in the "Manual Deploy" section choose the master branch of your project and click "Deploy Branch".
 6. You will now be able to open the project via the "Open App" button.
 
-## Deploying Static Files to AWS (Amazon Web Services)
+### Deploying Static Files to AWS (Amazon Web Services)
 
 1. Create a bucket in AWS S3 - ensuring that public access was **NOT** blocked.
 2. Ensure that static website hosting was enabled.
@@ -245,6 +246,33 @@ Heroku allows us to host Python projects which can have more features than stati
 7. Configure Django to connect S3 using the keys that have been provided when creating the user. 
 8. Input the relevant keys into the Config Vars in Heroku.
 
+## Database Structure
+
+[image of db structure](readme/db_structure.png)
+
+This database structure was created by doing the following: 
+1. Install both "django-extensions" and "pyparsing pydot".
+	- `pip3 install django-extensions`
+	- `pip3 install pyparsing pydot`
+2. Within `settings.py` add `django-extensions` to your list of installed apps.
+3. Specify the default options and select which apps you want to draw.
+```python
+	GRAPH_MODELS = {
+		'all_applications': True,
+		'group_models': True,
+		"app_labels": [
+			"whitehat_studio",
+        	"products",
+        	"profiles",
+        	"home",
+        	"checkout",
+        	"bag"
+    	],
+	}
+```
+4. Within the command line, create a .dot file containing the code used to draw the diagram from the selected apps in `GRAPH_MODELS`
+	- `./manage.py graph_models > project_name.dot`
+5. Browse to the .dot file and `CTRL+A` and `CTRL+C` and paste it into [GraphViz](https://dreampuf.github.io/GraphvizOnline/)
 --- 
 
 ## Credits
