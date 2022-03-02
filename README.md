@@ -274,7 +274,7 @@ This database structure was created by doing the following:
 ```
 4. Within the command line, create a .dot file containing the code used to draw the diagram from the selected apps in `GRAPH_MODELS`
 	- `./manage.py graph_models > project_name.dot`
-5. Browse to the .dot file and `CTRL+A` and `CTRL+C` and paste it into [GraphViz](https://dreampuf.github.io/GraphvizOnline/)
+5. Browse to the .dot file and `CTRL+A` and `CTRL+C` and paste it into [GraphViz](https://dreampuf.github.io/GraphvizOnline/).
 --- 
 
 ## Credits
